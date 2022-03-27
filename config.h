@@ -26,9 +26,9 @@ static const char *colors[][3]      = {
 };
 
 //volume keys
-static const char *upvol[]   = { "/usr/bin/pactl", "set-sink-volume", "0", "+5%",     NULL };
-static const char *downvol[] = { "/usr/bin/pactl", "set-sink-volume", "0", "-5%",     NULL };
-static const char *mutevol[] = { "/usr/bin/pactl", "set-sink-mute",   "0", "toggle",  NULL };
+static const char *mutecmd[]   = { "amixer", "-q", "set", "Master", "toggle", NULL };
+static const char *volupcmd[] = { "/bin/bash", "-c", "amixer -D default sset Master Playback 5%+" };
+static const char *voldowncmd[] = { "/bin/bash", "-c", "amixer -D default sset Master Playback 5%-" };
 
 
 /* tagging */
@@ -98,9 +98,9 @@ static Key keys[] = {
 	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
-	{ MODKEY,			XF86XK_AudioLowerVolume, spawn, {.v = downvol } },
-	{ MODKEY,                      	XF86XK_AudioMute, spawn, {.v = mutevol } },
-	{ MODKEY,                      	XF86XK_AudioRaiseVolume, spawn, {.v = upvol   } },
+	{ 0,							XF86XK_AudioMute, spawn, {.v = mutecmd } },
+	{ 0,					XF86XK_AudioLowerVolume, spawn, {.v = voldowncmd } },
+	{ 0,					XF86XK_AudioRaiseVolume, spawn, {.v = volupcmd } },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
