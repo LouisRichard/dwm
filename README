@@ -1,3 +1,18 @@
+Dependencies
+------------
+make
+gcc
+libx11-dev
+libxft-dev
+libxinerma-dev
+xorg
+
+My install includes the following :
+dwm/dwm
+st/st
+tools/dmenu
+tools/slock
+
 dwm - dynamic window manager
 ============================
 dwm is an extremely fast, small, and dynamic window manager for X.
