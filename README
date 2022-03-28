@@ -14,15 +14,7 @@ st/st
 tools/dmenu
 tools/slock
 
-dwm - dynamic window manager
-============================
-dwm is an extremely fast, small, and dynamic window manager for X.
-
-
-Requirements
-------------
-In order to build dwm you need the Xlib header files.
-
+all available on https://dl.suckless.org/
 
 Installation
 ------------
@@ -57,6 +49,9 @@ like this in your .xinitrc:
     done &
     exec dwm
 
+But I, ofc, have a .xinitrc in this repo you can take if you want to.
+It is currently optimised for my laptop with a battery indicator and all.
+A desktop version will come.
 
 Configuration
 -------------
