@@ -55,6 +55,8 @@ like this in your .xinitrc:
 But I, ofc, have a .xinitrc in this repo you can take if you want to.
 It is currently optimised for my laptop with a battery indicator and all.
 A desktop version will come.
+If you want to use mine, juste copy or move it to your home directory and remove the `.laptop` or `.desktop` from the filename.
+IE : mv .xinitrc.laptop ~/.xinitrc
 
 Configuration
 -------------
