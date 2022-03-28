@@ -1,5 +1,0 @@
-dll.suckless.org
-
-dwm/dwm
-tools/dmenu
-st/st
