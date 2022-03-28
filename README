@@ -4,9 +4,9 @@ make
 gcc
 libx11-dev
 libxft-dev
-libxinerma-dev
+libxinerama-dev
 xorg
-fontawesome
+fonts-font-awesome
 
 If you are using a discreet GPU, make sure to install the necessary drivers beforehand 
 (looking at you nVidia)
