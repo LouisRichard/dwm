@@ -6,6 +6,7 @@ libx11-dev
 libxft-dev
 libxinerma-dev
 xorg
+fontawesome
 
 My install includes the following :
 dwm/dwm
