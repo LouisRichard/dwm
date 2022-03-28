@@ -8,8 +8,11 @@ libxinerma-dev
 xorg
 fontawesome
 
+If you are using a discreet GPU, make sure to install the necessary drivers beforehand 
+(looking at you nVidia)
+
 My install includes the following :
-dwm/dwm     - Dynamic window manager (this repo)
+dwm/dwm     - Dynamic window manager (this repo, no need to download it)
 st/st       - simple terminal
 tools/dmenu - dynamic menu
 tools/slock - x display locker, recommended if you wanna lock your screen in an office environment
