@@ -9,10 +9,10 @@ xorg
 fontawesome
 
 My install includes the following :
-dwm/dwm
-st/st
-tools/dmenu
-tools/slock
+dwm/dwm     - Dynamic window manager (this repo)
+st/st       - simple terminal
+tools/dmenu - dynamic menu
+tools/slock - x display locker, recommended if you wanna lock your screen in an office environment
 
 all available on https://dl.suckless.org/
 
