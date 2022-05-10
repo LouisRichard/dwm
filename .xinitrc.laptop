@@ -1,9 +1,14 @@
+
 while true; do
-	xsetroot -name "Memory $(free -m | grep '^Mem' | awk '{print "used: " $3"MB"}') | 
-	$(cat /sys/class/power_supply/BAT0/capacity)% | 
-	$(cat /sys/class/power_supply/BAT0/status) | 
-	$( date +"%F %R" )"
+	xsetroot -name " Memory $(free -m | grep '^Mem' | awk '{print "used: " $3"MB"}') |
+CPU $(acpi -t | awk '{print $4}') c |
+$(top -bn 1 | grep 'Cpu' | tr -d 'usy,' | awk '{print "user " $2 ", sys " $3}') |
+BAT $(cat /sys/class/power_supply/BAT0/capacity)% |
+$(cat /sys/class/power_supply/BAT0/status) |
+$( date +"%F %R" )"
 	
 	sleep 1
 done &
+feh --bg-fill ~/.wp/wp.png
+setxkbmap ch fr
 exec dwm
