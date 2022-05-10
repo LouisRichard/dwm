@@ -3,22 +3,22 @@ Dynamic Window Manager
 Along with some more stuff just not in this repo
 
 ## Dependencies
-* make
-* gcc 
-* libx11-dev
-* libxft-dev
-* libxinerama-dev
-* xorg (obviously)
-* [Nerd Fonts](https://github.com/ryanoasis/nerd-fonts)
+* make  
+* gcc  
+* libx11-dev  
+* libxft-dev  
+* libxinerama-dev  
+* xorg (obviously)  
+* [Nerd Fonts](https://github.com/ryanoasis/nerd-fonts)  
 
 If you are using a discreet GPU, make sure to install the necessary drivers beforehand 
 (looking at you nVidia)
 
 My install includes the following :
-dwm/dwm     - Dynamic window manager (this repo, no need to download it)
-st/st       - simple terminal
-tools/dmenu - dynamic menu
-tools/slock - x display locker, recommended if you wanna lock your screen in an office environment
+* dwm/dwm     - Dynamic window manager (this repo, no need to download it)
+* st/st       - simple terminal
+* tools/dmenu - dynamic menu
+* tools/slock - x display locker, recommended if you wanna lock your screen in an office environment
 
 all available with wget on https://dl.suckless.org/
 
@@ -56,23 +56,31 @@ do
 done &
 exec dwm
 ```
-But I, ofc, have a .xinitrc in this repo you can take if you want to.
-It is currently optimised for my laptop with a battery indicator and all.
-A desktop version will come.
-If you want to use mine, juste copy or move it to your home directory and remove the `.laptop` or `.desktop` from the filename.
+(For that, you'll have to make sure `xsetroot` is installed)  
+But I, ofc, have a .xinitrc in this repo you can take if you want to.  
+It is currently optimised for my laptop with a battery indicator and all.  
+A desktop version will come.  
+If you want to use mine, juste copy or move it to your home directory and remove the `.laptop` or `.desktop` from the filename.  
 IE : `mv .xinitrc.laptop ~/.xinitrc`
+
+If you wish to use my .xinitrc file, make sure you have the following installed :
+* awk - Data extraction from the datas in xsetroot  
+* feh - Change the wallpaper  
+
+You can put a custom wallpaper in `~/.wp/wp.png`  
+Or you can edit the file, idc  
 
 ## Configuration
 The configuration of dwm is done by creating a custom config.h
-and (re)compiling the source code.
+and (re)compiling the source code.  
 Here, you'll be playing with my config but you can modify it at your will.
 
 The modifications I've done include :
-* Using different fonts
-* Having media keys working
-  * Volume keys made to work with Pulseaudio and Alsa
-* Change the color
-* The custom .xinitrc
+* Using different fonts  
+* Having media keys working  
+  * Volume keys made to work with Pulseaudio and Alsa  
+* Change the color  
+* The custom .xinitrc  
 
 ## Source
 https://git.suckless.org/dwm/
