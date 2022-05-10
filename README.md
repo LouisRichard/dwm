@@ -25,7 +25,7 @@ all available with wget on https://dl.suckless.org/
 ## Installation
 Extract the other archives using 
 ```bash
-tar -xpvf PACKAGE.tar.gz
+tar -xvf PACKAGE.tar.gz
 ```
 
 Edit config.mk to match your local setup (dwm is installed into the /usr/local namespace by default).
