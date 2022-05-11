@@ -2,24 +2,26 @@
 while true; do
 	xsetroot -name " 
 
-# Memory used (MB)
-Memory $(free -m | grep '^Mem' | awk '{print "used: " $3"MB"}') |
+	# Memory used (MB)
+	Memory $(free -m | grep '^Mem' | awk '{print "used: " $3"MB"}') |
 
-# Cpu temp (Celcius)
-CPU $(acpi -t | awk '{print $4}') c |
+	# Cpu temp (Celcius)
+	CPU $(acpi -t | awk '{print $4}') c |
 
-# CPU usage (user, system)
-$(top -bn 1 | grep 'Cpu' | tr -d 'usy,' | awk '{print "user " $2 ", sys " $3}') |
+	# CPU usage (user, system)
+	$(top -bn 1 | grep 'Cpu' | tr -d 'usy,' | awk '{print "user " $2 ", sys " $3}') |
 
-# Battery charge
-BAT $(cat /sys/class/power_supply/BAT0/capacity)% |
+	# Battery charge
+	BAT $(cat /sys/class/power_supply/BAT0/capacity)% |
 
-# Battery status (Discharging, Charging, Full)
-$(cat /sys/class/power_supply/BAT0/status) |
+	# Battery status (Discharging, Charging, Full)
+	$(cat /sys/class/power_supply/BAT0/status) |
 
-# Date and time
-$( date +"%F %R" )"
-	
+	# Date and time
+	$( date +"%F %R" )
+
+	"
+	# Update every seconds
 	sleep 1
 done &
 
