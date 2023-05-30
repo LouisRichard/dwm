@@ -9,6 +9,7 @@ Along with some more stuff just not in this repo
 * libxft-dev  
 * libxinerama-dev  
 * xorg (obviously)  
+* xsetroot  
 * [Nerd Fonts](https://github.com/ryanoasis/nerd-fonts)  
 
 If you are using a discreet GPU, make sure to install the necessary drivers beforehand 
