@@ -1,6 +1,8 @@
 # DWM
-Dynamic Window Manager
+Dynamic Window Manager  
 Along with some more stuff just not in this repo
+
+# I archived this repo as it is not kept up to date with Suckless' version and I went back to a regular DE. I have no need for it anymore.
 
 ## Dependencies
 * make  
